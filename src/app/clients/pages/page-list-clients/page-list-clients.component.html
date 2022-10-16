@@ -1,0 +1,51 @@
+<app-template-full-width [title]="title"
+*ngIf="collection$ | async as collection">
+  <!-- <pre>{{ collection |json }}</pre> -->
+  <!-- <button (click)="changeTitle()">Change title</button> -->
+  <app-table-light [headers]="headers">
+    <tr *ngFor="let item of collection">
+      <!-- <td>{{ item.typePresta }}</td>
+      <td>{{ item.client }}</td>
+      <td>{{ item.nbJours }}</td>
+      <td>{{ item.tjmHt |currency }}</td>
+      <td>{{ item.nbJours |total : item.tjmHt |currency }}</td>
+      <td>{{ item.nbJours |total : item.tjmHt : item.tva |currency }}</td> -->
+      <td>{{ item.companyName }}</td>
+
+      <td>{{ item.firstName }} {{ item.lastName }}</td>
+
+      <td>{{ item.email }}</td>
+
+      <td>{{ item.phone }}</td>
+
+      <td>{{ item.country }}</td>
+
+      <td>{{ item.city }}</td>
+
+      <td
+        [ngClass]="{
+          'state-active': item.state === 'ACTIVE',
+          'state-inactive': item.state === 'INACTIVE'
+        }"
+      >
+        <select (change)="changeState(item, $event)">
+          <option
+            *ngFor="let state of states"
+            [value]="state"
+            [selected]="state === item.state"
+          >
+            {{ state }}
+          </option>
+        </select>
+      </td>
+            <td>
+        <app-btn
+          [routerLink]="[routeEdit]"
+          [queryParams]="{id: item.id}"
+          [label]="labelEdit"
+        ></app-btn>
+      </td>
+    </tr>
+  </app-table-light>
+  <app-btn [route]="route" [label]="label"></app-btn>
+</app-template-full-width>

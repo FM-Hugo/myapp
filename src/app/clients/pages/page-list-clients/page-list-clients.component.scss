@@ -1,0 +1,15 @@
+td {
+  width: 125px;
+  text-align: center;
+  max-width: 125px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.state-inactive > select:only-child {
+  background-color: var(--app-error);
+}
+
+.state-active > select:only-child {
+  background-color: var(--app-success);
+}

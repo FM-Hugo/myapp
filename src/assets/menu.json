@@ -1,0 +1,52 @@
+[
+
+  {
+    "text": "Login",
+    "icon": "assignment_ind",
+    "children": [
+      {
+        "text": "Sign-in",
+        "icon": "account_circle",
+        "routerLink": "sign-in"
+      },
+      {
+        "text": "Sign-up",
+        "icon": "history_edu",
+        "routerLink": "/sign-up"
+      }
+    ]
+  },
+  {
+
+    "text": "Orders",
+    "icon": "shopping_cart_checkout",
+    "children": [
+      {
+        "text": "List",
+        "icon": "shopping_cart",
+        "routerLink": "/orders"
+      },
+      {
+        "text": "Add",
+        "icon": "add_shopping_cart",
+        "routerLink": "/orders/add"
+      }
+    ]
+  },
+  {
+    "text": "Clients",
+    "icon": "supervisor_account",
+    "children": [
+      {
+        "text": "List",
+        "icon": "person_search",
+        "routerLink": "/clients"
+      },
+      {
+        "text": "Add",
+        "icon": "person_add_alt_1",
+        "routerLink": "/clients/add"
+      }
+    ]
+  }
+]

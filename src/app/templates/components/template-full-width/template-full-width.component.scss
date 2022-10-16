@@ -1,0 +1,15 @@
+.bandeau {
+  background: var(--app-light);
+  padding-left: 0.5rem;
+  height: 30px;
+  h1 {
+    color: var(--app-darklight2);
+    font-size:20px;
+  }
+}
+
+.my-container {
+  align-items: center;
+  margin: auto;
+}
+
